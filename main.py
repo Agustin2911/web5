@@ -1,6 +1,6 @@
 import streamlit as st
 from translator import *
-
+from io import BytesIO
 
 st.set_page_config(page_title="files_translator",page_icon="📁",layout="centered")
 #st.image("images/file.png",use_column_width=True,width=400)
