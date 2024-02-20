@@ -28,10 +28,12 @@ if st.button("traslate"):
                 read_docx2(archivo_medio,archivo_medio2,valor)
                 docx_pdf(archivo_medio2,archivo_terminado)
                 name=archivo_terminado+".pdf"
-                #fix
+        bytes_data = BytesIO(open(archivo_terminado, 'rb').read())
+
+    
         st.download_button(
                 label="Download the file",
-                data=open(archivo_terminado, 'rb').read(),
+                data=bytes_data,
                 file_name=name,
                 key='boton_descarga'
-        )
+            )
